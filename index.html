@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Utama</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #141E30, #243B55);
+            overflow: hidden;
+            color: white;
+        }
+
+        /* Latar belakang hujan */
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .raindrop {
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: fall 2s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Teks Hacker */
+        .hacker-text {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            animation: blink 1s infinite;
+            position: relative;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Kontainer Utama */
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #eee;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .description {
+            font-size: 16px;
+            margin: 20px 0;
+            padding: 0 20px;
+            color: #ccc;
+            line-height: 1.5;
+            text-align: justify;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 2s;
+        }
+
+        .menu button {
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .menu button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+
+        .audio-container {
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 2.5s;
+            text-align: center;
+        }
+
+        .audio-container button {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .audio-container button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Teks Hacker -->
+    <div class="hacker-text">
+        by Irfa/Tayo
+    </div>
+
+    <!-- Audio Terintegrasi -->
+    <div class="audio-container">
+        <button id="audioButton">Putar Musik</button>
+        <audio id="audioPlayer">
+            <source src="audio.mp3" type="audio/mp3">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+    </div>
+
+    <!-- Latar belakang hujan -->
+    <div class="rain"></div>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <div class="logo"></div>
+        <h1>Selamat Datang</h1>
+        <div class="description">
+            <p><strong>Termux</strong> adalah aplikasi emulator terminal untuk Android yang menyediakan lingkungan Linux minimal. Dengan Termux, Anda dapat menjalankan skrip, menggunakan perintah Linux, dan menginstal berbagai alat pengembangan langsung dari perangkat Android Anda.</p>
+        </div>
+
+        <div class="menu">
+            <button onclick="window.location.href='tools.html'">Kumpulan Tools Termux</button>
+            <button onclick="window.location.href='tat.html'">day 2</membuat>
+            <button onclick="window.open('https://youtu.be/56jdMBfhjiY?si=vMlb_ti4KRuvSJHI', '_blank')">YouTube Saya</button>
+            <button onclick="window.open('https://wa.me/628818548531', '_blank')">Hubungi Saya di WhatsApp</button>
+            <button onclick="window.open('https://whatsapp.com/channel/0029Val7UdFC6Zvi9mp3Ff3r', '_blank')">Masuk ke Saluran</button>
+            <button onclick="window.open('https://had-ai.vercel.app', '_blank')">bantuan ai TC 2</button>
+        </div>
+    </div>
+
+    <!-- Script untuk membuat hujan -->
+    <script>
+        // Script untuk tombol audio
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioButton = document.getElementById('audioButton');
+
+        audioButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                audioButton.textContent = 'Matikan Musik';
+            } else {
+                audioPlayer.pause();
+                audioButton.textContent = 'Putar Musik';
+            }
+        });
+
+        // Script untuk membuat efek hujan
+        const rainContainer = document.querySelector('.rain');
+        const createRaindrop = () => {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = Math.random() * 100 + 'vw';
+            raindrop.style.animationDuration = Math.random() * 2 + 2 + 's';
+            rainContainer.appendChild(raindrop);
+            setTimeout(() => raindrop.remove(), 4000);
+        };
+        setInterval(createRaindrop, 100);
+    </script>
+</body>
+</html>

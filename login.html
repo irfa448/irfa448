@@ -5,127 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        /* Reset default margin dan padding */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #141E30, #243B55);
+            color: white;
             margin: 0;
             padding: 0;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #141E30, #243B55);
-            font-family: 'Arial', sans-serif;
-            color: white;
         }
 
         .login-container {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-            width: 100%;
-            max-width: 400px;
+            width: 300px;
             text-align: center;
-            animation: fadeIn 1s ease-out;
         }
 
-        .login-container h2 {
+        h2 {
+            color: #00ff00;
             margin-bottom: 20px;
-            font-size: 30px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .input-field {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             margin: 10px 0;
-            background: transparent;
-            border: 2px solid #00ff00;
             border-radius: 5px;
+            border: 1px solid #00ff00;
+            background: transparent;
             color: white;
             font-size: 16px;
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .input-field:focus {
-            border-color: #2575fc;
-            box-shadow: 0 0 10px rgba(37, 117, 252, 0.8);
         }
 
         .login-btn {
-            width: 100%;
-            padding: 12px;
-            font-size: 18px;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
+            padding: 10px 20px;
+            background: #00ff00;
             border: none;
             border-radius: 5px;
+            color: black;
+            font-size: 16px;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .login-btn:hover {
-            transform: scale(1.05);
-            background: linear-gradient(to right, #2575fc, #6a11cb);
-        }
-
-        /* Animasi Fade In */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Link Register */
-        .register-link {
-            margin-top: 15px;
-            font-size: 14px;
-            color: #ccc;
-            text-decoration: none;
             transition: 0.3s;
         }
 
-        .register-link:hover {
-            color: #ff7e5f;
+        .login-btn:hover {
+            background: #009900;
+        }
+
+        .back-link {
+            color: #ccc;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .back-link:hover {
+            color: #fff;
         }
     </style>
 </head>
 <body>
-    <!-- Kontainer Login -->
     <div class="login-container">
-        <h2>Login Ke Akun Anda</h2>
-        <!-- Form Login -->
-        <form onsubmit="return handleLogin(event)">
-            <input type="text" class="input-field" id="username" placeholder="Username" required>
-            <input type="password" class="input-field" id="password" placeholder="Password" required>
-            <button type="submit" class="login-btn">Login</button>
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <input type="email" id="loginEmail" class="input-field" placeholder="Email" required>
+            <input type="password" id="loginPassword" class="input-field" placeholder="Password" required>
+            <button type="submit" class="login-btn">Masuk</button>
         </form>
-
-        <a href="register.html" class="register-link">Belum punya akun? Daftar di sini</a>
+        <a href="register.html" class="back-link">Belum punya akun? Daftar di sini</a>
     </div>
 
     <script>
-        // Fungsi untuk menangani login
         function handleLogin(event) {
             event.preventDefault();
 
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
 
-            // Cek username dan password (contoh sederhana)
-            if (username === "admin" && password === "admin123") {
-                // Redirect ke halaman utama setelah login berhasil
-                window.location.href = "tayo.html";
+            const storedUserData = JSON.parse(localStorage.getItem('userData'));
+
+            if (storedUserData && storedUserData.email === email && storedUserData.password === password) {
+                alert('Login berhasil!');
+                // Redirect ke halaman utama setelah login sukses
+                window.location.href = "index.html";
             } else {
-                alert("Username atau password salah!");
+                alert('Email atau Password salah!');
             }
         }
     </script>
 </body>
-</html>
+</html> 

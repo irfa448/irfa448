@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan SQL Lengkap</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.3s;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h2 {
+            text-transform: uppercase;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .content code {
+            background: #333;
+            color: #00ff00;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .content pre {
+            background: #222;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #000;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            width: fit-content;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+            animation-delay: 1.5s;
+        }
+
+        .back-button:hover {
+            background: #ffc107;
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Panduan SQL</h1>
+        <p>Cara Install dan Menggunakan SQL di Termux dengan Mudah</p>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Pengenalan SQL</h2>
+        <p>SQL (Structured Query Language) adalah bahasa standar yang digunakan untuk mengakses, mengelola, dan memanipulasi data dalam database. SQL banyak digunakan dalam aplikasi yang membutuhkan interaksi dengan database.</p>
+
+        <h2>Cara Install SQL di Termux</h2>
+        <p>Ikuti langkah-langkah berikut untuk menginstall SQL di Termux:</p>
+        <pre>
+pkg update && pkg upgrade
+pkg install mariadb
+mysql_install_db
+mysqld_safe --user=mysql &
+        </pre>
+        <p>Perintah di atas akan menginstall MariaDB, sebuah software database yang mendukung SQL. Setelah proses selesai, jalankan perintah <code>mysql -u root -p</code> untuk masuk ke dalam konsol MariaDB.</p>
+
+        <h2>Cara Menggunakan SQL</h2>
+        <p>Berikut adalah beberapa contoh perintah SQL dasar:</p>
+        <ul>
+            <li><strong>Membuat Database:</strong></li>
+            <pre>CREATE DATABASE nama_database;</pre>
+            <li><strong>Membuat Tabel:</strong></li>
+            <pre>
+CREATE TABLE nama_tabel (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(255) NOT NULL,
+    umur INT NOT NULL
+);
+            </pre>
+            <li><strong>Menambahkan Data:</strong></li>
+            <pre>INSERT INTO nama_tabel (nama, umur) VALUES ('Ali', 25);</pre>
+            <li><strong>Menampilkan Data:</strong></li>
+            <pre>SELECT * FROM nama_tabel;</pre>
+            <li><strong>Menghapus Data:</strong></li>
+            <pre>DELETE FROM nama_tabel WHERE id=1;</pre>
+        </ul>
+
+        <h2>Tips dan Catatan</h2>
+        <p>Gunakan SQL dengan bijak untuk mengelola data Anda. Hindari kesalahan seperti menghapus tabel tanpa cadangan (backup).</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="tools.html" class="back-button">Kembali ke Menu</a>
+
+</body>
+</html>

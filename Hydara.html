@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Hydra di Termux</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f4f4f4;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffd700;
+            animation: fadeInDown 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            animation: slideInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        li:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        li h3 {
+            margin: 0 0 10px 0;
+            color: #00ffcc;
+        }
+
+        li p, li code {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        pre {
+            background: #333;
+            color: #00ffcc;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            background: #00aaff;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 2s ease-out forwards;
+            opacity: 0;
+        }
+
+        .back-button:hover {
+            background: #008ecc;
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tutorial Hydra di Termux</h1>
+        <p style="text-align: center;">Berikut adalah panduan lengkap untuk menggunakan Hydra di Termux:</p>
+
+        <ul>
+            <li>
+                <h3>1. Instalasi Hydra</h3>
+                <p>Untuk menginstal Hydra di Termux, jalankan perintah berikut:</p>
+                <pre>
+pkg update && pkg upgrade
+pkg install hydra
+                </pre>
+            </li>
+
+            <li>
+                <h3>2. Pengenalan Hydra</h3>
+                <p>Hydra adalah alat untuk melakukan brute-force pada berbagai protokol seperti SSH, FTP, HTTP, dan lainnya.</p>
+                <p><strong>Catatan:</strong> Gunakan alat ini secara bertanggung jawab.</p>
+            </li>
+
+            <li>
+                <h3>3. Contoh Penggunaan Hydra</h3>
+                <p>Berikut adalah contoh penggunaan Hydra pada layanan SSH:</p>
+                <pre>
+hydra -l username -P passwordlist.txt ssh://target_ip
+                </pre>
+                <p>Keterangan:</p>
+                <ul>
+                    <li><code>-l</code>: Username target</li>
+                    <li><code>-P</code>: Path ke file berisi daftar password</li>
+                    <li><code>ssh://</code>: Protokol yang digunakan</li>
+                    <li><code>target_ip</code>: IP atau domain target</li>
+                </ul>
+            </li>
+
+            <li>
+                <h3>4. Contoh Brute-Force Login FTP</h3>
+                <p>Untuk brute-force login FTP, gunakan perintah berikut:</p>
+                <pre>
+hydra -l admin -P passwordlist.txt ftp://target_ip
+                </pre>
+            </li>
+
+            <li>
+                <h3>5. Cara Membuat Password List</h3>
+                <p>Anda bisa membuat daftar password sederhana dengan perintah berikut:</p>
+                <pre>
+echo -e "password1\npassword2\npassword3" > passwordlist.txt
+                </pre>
+            </li>
+
+            <li>
+                <h3>6. Tips Menggunakan Hydra</h3>
+                <p>Beberapa tips saat menggunakan Hydra:</p>
+                <ul>
+                    <li>Gunakan daftar password yang relevan.</li>
+                    <li>Pastikan target memiliki izin untuk diuji.</li>
+                    <li>Jangan gunakan alat ini untuk aktivitas ilegal.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="tools.html" class="back-button">Kembali ke Menu</a>
+    </div>
+</body>
+</html>

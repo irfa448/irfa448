@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumpulan Tools</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #f0f0f0;
+            background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+            overflow-x: hidden;
+        }
+
+        /* Navigation Menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fdbb2d;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Content Section */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #fdbb2d;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        /* Button Back */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #fdbb2d;
+            color: #000;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background: #ffc107;
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="irfaa.html">Tutorial</a>
+        <a href="bot.html">Install Bot</a>
+        <a href="hydara.html">Hydara</a>
+        <a href="sepuh.html">Tutorial Sepuh</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Selamat Datang di Kumpulan Tools</h1>
+        <p>Temukan berbagai tutorial dan alat bantu untuk memaksimalkan produktivitas Anda.</p>
+        <a href="ai.html" class="button">Kumpulan Tools</a>
+        <a href="sql.html" class="button">Tutorial SQL</a>  
+        <a href="git.html" class="button">Tools Termux GitHub</a> <!-- Tombol Baru -->
+    </div>
+
+</body>
+</html>

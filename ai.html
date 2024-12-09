@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumpulan Tools Termux</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+            color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.2s ease-out forwards;
+            opacity: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ffd700;
+            animation: fadeInDown 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            animation: slideInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        li:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        li h3 {
+            margin: 0 0 10px 0;
+            color: #00ffcc;
+        }
+
+        li p {
+            margin: 0;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            background: #00aaff;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            animation: fadeInUp 2s ease-out forwards;
+            opacity: 0;
+        }
+
+        .back-button:hover {
+            background: #008ecc;
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kumpulan Tools Termux</h1>
+        <p style="text-align: center;">Berikut adalah daftar 10 tools Termux yang berguna beserta panduan penggunaannya:</p>
+
+        <ul>
+            <li>
+                <h3>1. Metasploit</h3>
+                <p><strong>Kegunaan:</strong> Framework untuk pengujian keamanan jaringan.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install metasploit</code>, kemudian jalankan dengan <code>msfconsole</code>.</p>
+            </li>
+
+            <li>
+                <h3>2. Nmap</h3>
+                <p><strong>Kegunaan:</strong> Pemindai jaringan untuk mendeteksi port terbuka.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install nmap</code>, lalu gunakan <code>nmap [IP]</code>.</p>
+            </li>
+
+            <li>
+                <h3>3. Hydra</h3>
+                <p><strong>Kegunaan:</strong> Alat brute force untuk login ke server tertentu.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install hydra</code>, lalu jalankan dengan <code>hydra -l user -P passlist.txt [target]</code>.</p>
+            </li>
+
+            <li>
+                <h3>4. Sqlmap</h3>
+                <p><strong>Kegunaan:</strong> Mendeteksi dan mengeksploitasi SQL Injection.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install sqlmap</code>, gunakan <code>sqlmap -u [URL]</code>.</p>
+            </li>
+
+            <li>
+                <h3>5. Node.js</h3>
+                <p><strong>Kegunaan:</strong> Menjalankan JavaScript di server.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install nodejs</code>, lalu jalankan file JS dengan <code>node [file.js]</code>.</p>
+            </li>
+
+            <li>
+                <h3>6. Wget</h3>
+                <p><strong>Kegunaan:</strong> Mengunduh file dari internet.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install wget</code>, lalu gunakan <code>wget [URL]</code>.</p>
+            </li>
+
+            <li>
+                <h3>7. Python</h3>
+                <p><strong>Kegunaan:</strong> Menjalankan atau membuat skrip Python.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install python</code>, lalu jalankan dengan <code>python [file.py]</code>.</p>
+            </li>
+
+            <li>
+                <h3>8. Termux API</h3>
+                <p><strong>Kegunaan:</strong> Mengakses fitur perangkat seperti GPS, SMS, dan lain-lain.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install termux-api</code>, jalankan seperti <code>termux-battery-status</code>.</p>
+            </li>
+
+            <li>
+                <h3>9. Git</h3>
+                <p><strong>Kegunaan:</strong> Mengelola kode dan mengunduh proyek dari GitHub.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install git</code>, gunakan <code>git clone [URL]</code>.</p>
+            </li>
+
+            <li>
+                <h3>10. Neofetch</h3>
+                <p><strong>Kegunaan:</strong> Menampilkan informasi sistem dengan grafis.</p>
+                <p><strong>Cara Menggunakan:</strong> <code>pkg install neofetch</code>, lalu jalankan dengan <code>neofetch</code>.</p>
+            </li>
+        </ul>
+
+        <a href="index.html" class="back-button">Kembali ke Menu</a>
+    </div>
+
+</body>
+</html>

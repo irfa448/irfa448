@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install Bot WhatsApp</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #f0f0f0;
+            background: radial-gradient(circle, #141E30, #243B55);
+            overflow: hidden;
+        }
+
+        /* Background Animation */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 1;
+        }
+
+        .stars::after {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: url('space.gif') repeat;
+            animation: moveStars 60s linear infinite;
+        }
+
+        @keyframes moveStars {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50%, -50%); }
+        }
+
+        /* Animasi Muncul */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Kontainer Utama */
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #ff6b6b;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        p, ul, pre {
+            text-align: left;
+            font-size: 1rem;
+            margin: 15px 0;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        pre {
+            background: #333;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #45a049;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="stars"></div>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <h1>Install Bot WhatsApp</h1>
+
+        <p>Berikut adalah langkah-langkah lengkap untuk menginstall bot WhatsApp di Termux:</p>
+
+        <ul>
+            <li>Pastikan Termux telah diupdate ke versi terbaru.</li>
+            <li>Install package yang dibutuhkan seperti Node.js dan Git.</li>
+            <li>Clone repository bot WhatsApp dari GitHub.</li>
+            <li>Konfigurasi bot menggunakan file konfigurasi.</li>
+            <li>Jalankan bot di Termux.</li>
+        </ul>
+
+        <h2>Langkah 1: Update Termux</h2>
+        <p>Ketik perintah berikut di Termux untuk memastikan semua package up-to-date:</p>
+        <pre>
+pkg update && pkg upgrade
+        </pre>
+
+        <h2>Langkah 2: Install Package Pendukung</h2>
+        <p>Install Node.js dan Git yang diperlukan untuk menjalankan bot:</p>
+        <pre>
+pkg install nodejs
+pkg install git
+        </pre>
+
+        <h2>Langkah 3: Clone Repository Bot</h2>
+        <p>Clone repository bot WhatsApp dari GitHub:</p>
+        <pre>
+git clone https://github.com/example/repository
+cd repository
+npm install
+        </pre>
+
+        <h2>Langkah 4: Konfigurasi Bot</h2>
+        <p>Edit file konfigurasi sesuai dengan akun WhatsApp Anda. Biasanya file konfigurasi berformat:</p>
+        <pre>
+config.json
+        </pre>
+
+        <p>Isi file tersebut dengan informasi seperti API key atau nomor WhatsApp Anda.</p>
+
+        <h2>Langkah 5: Jalankan Bot</h2>
+        <p>Setelah semua konfigurasi selesai, jalankan bot dengan perintah:</p>
+        <pre>
+npm start
+        </pre>
+
+        <p>Jika berhasil, bot akan aktif dan dapat digunakan di WhatsApp.</p>
+
+        <a href="tools.html" class="back-button">Kembali ke Index</a>
+    </div>
+</body>
+</html>

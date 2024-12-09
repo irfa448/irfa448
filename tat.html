@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Shooter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            margin: auto;
+            overflow: hidden;
+            background: #000;
+            border: 2px solid #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .bot {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://i.ibb.co/WnNqcFb/bot.png') no-repeat center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        #scoreBoard {
+            text-align: center;
+            color: white;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        #startButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #ff5722;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #startButton:hover {
+            background: #e64a19;
+        }
+
+        #gameOver {
+            display: none;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bot Shooter Game</h1>
+    <div id="scoreBoard">Skor: <span id="score">0</span></div>
+    <div id="gameArea"></div>
+    <button id="startButton">Mulai Game</button>
+    <div id="gameOver">Game Over! Skor Akhir: <span id="finalScore">0</span></div>
+
+    <script>
+        const gameArea = document.getElementById("gameArea");
+        const scoreBoard = document.getElementById("score");
+        const startButton = document.getElementById("startButton");
+        const gameOverDisplay = document.getElementById("gameOver");
+        const finalScoreDisplay = document.getElementById("finalScore");
+
+        let score = 0;
+        let gameActive = false;
+        let gameInterval;
+
+        // Function to create and place a bot randomly
+        function createBot() {
+            const bot = document.createElement("div");
+            bot.className = "bot";
+            bot.style.left = Math.random() * (gameArea.clientWidth - 50) + "px";
+            bot.style.top = Math.random() * (gameArea.clientHeight - 50) + "px";
+
+            // Remove bot after 3 seconds if not clicked
+            setTimeout(() => {
+                if (gameArea.contains(bot)) {
+                    gameArea.removeChild(bot);
+                }
+            }, 3000);
+
+            // Add click event to bot
+            bot.addEventListener("click", () => {
+                if (gameActive) {
+                    score++;
+                    scoreBoard.textContent = score;
+                    gameArea.removeChild(bot);
+                }
+            });
+
+            gameArea.appendChild(bot);
+        }
+
+        // Start the game
+        startButton.addEventListener("click", () => {
+            score = 0;
+            scoreBoard.textContent = score;
+            gameOverDisplay.style.display = "none";
+            startButton.style.display = "none";
+            gameActive = true;
+
+            // Generate bots at intervals
+            gameInterval = setInterval(createBot, 1000);
+
+            // Stop the game after 20 seconds
+            setTimeout(() => {
+                gameActive = false;
+                clearInterval(gameInterval);
+                gameOverDisplay.style.display = "block";
+                finalScoreDisplay.textContent = score;
+                startButton.style.display = "block";
+            }, 20000);
+        });
+    </script>
+</body>
+</html>

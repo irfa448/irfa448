@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Install Termux</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+        }
+
+        /* Animasi Muncul */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color: #fdbb2d;
+        }
+
+        p, ul, pre {
+            margin: 15px 0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        pre {
+            background: #333;
+            padding: 15px;
+            color: #00ff00;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #fdbb2d;
+            font-weight: bold;
+        }
+
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 30px;
+            background: #fdbb2d;
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background: #ffc107;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Install Termux</h1>
+
+        <p>Termux adalah aplikasi emulator terminal Android yang memungkinkan Anda menjalankan perintah Linux langsung di perangkat Android Anda. Aplikasi ini cocok untuk belajar pemrograman, menjalankan server, atau tugas lain yang biasanya dilakukan di sistem Linux.</p>
+
+        <h2>Apa yang Anda Butuhkan?</h2>
+        <ul>
+            <li>Perangkat Android dengan versi 5.0 (Lollipop) atau lebih tinggi.</li>
+            <li>Koneksi internet yang stabil.</li>
+            <li>Ruang penyimpanan minimal 50 MB.</li>
+        </ul>
+
+        <h2>Langkah-Langkah Install Termux</h2>
+
+        <h3>1. Unduh dan Install Termux</h3>
+        <p>Langkah pertama adalah mengunduh Termux dari sumber yang terpercaya:</p>
+        <ul>
+            <li>Buka <a href="https://f-droid.org/" target="_blank" style="color: #fdbb2d;">F-Droid</a> dan cari aplikasi Termux.</li>
+            <li>Download dan install aplikasi tersebut.</li>
+        </ul>
+        <p>Alternatif lain, Anda dapat mengunduhnya melalui link berikut:</p>
+        <pre>
+https://github.com/termux/termux-app/releases
+        </pre>
+
+        <h3>2. Update dan Upgrade</h3>
+        <p>Setelah Termux terinstall, buka aplikasinya dan jalankan perintah berikut untuk memastikan aplikasi dalam kondisi terbaru:</p>
+        <pre>
+pkg update && pkg upgrade
+        </pre>
+
+        <h3>3. Install Paket Tambahan</h3>
+        <p>Beberapa paket tambahan sering dibutuhkan untuk menjalankan tugas di Termux, seperti:</p>
+        <pre>
+pkg install git
+pkg install python
+pkg install nodejs
+pkg install nano
+        </pre>
+
+        <h3>4. Menjalankan Perintah Dasar</h3>
+        <p>Setelah semua terinstall, Anda dapat mencoba beberapa perintah dasar untuk memastikan semuanya bekerja dengan baik:</p>
+        <pre>
+ls
+pwd
+echo "Hello Termux"
+        </pre>
+
+        <h2>Kelebihan Termux</h2>
+        <ul>
+            <li>Mendukung berbagai bahasa pemrograman seperti Python, Node.js, Ruby, dan lainnya.</li>
+            <li>Bisa digunakan untuk mengelola server kecil.</li>
+            <li>Cocok untuk belajar Linux dan perintah terminal.</li>
+        </ul>
+
+        <h2>Tips Pemula</h2>
+        <p>Untuk pemula, berikut beberapa tips penting:</p>
+        <ul>
+            <li>Jangan lupa selalu menjalankan <code>pkg update && pkg upgrade</code> secara berkala.</li>
+            <li>Gunakan <code>nano</code> atau <code>vim</code> untuk mengedit file teks.</li>
+            <li>Jangan langsung menyalin perintah dari sumber yang tidak terpercaya.</li>
+        </ul>
+
+        <a href="tools.html" class="button">Kembali ke Index</a>
+    </div>
+</body>
+</html>

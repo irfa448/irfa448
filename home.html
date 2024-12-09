@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Website Saya</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #f0f0f0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Kontainer */
+        .container > * {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+            text-transform: uppercase;
+            color: #fdbb2d;
+            animation-delay: 0.5s;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        p:nth-of-type(1) {
+            animation-delay: 1s;
+        }
+
+        p:nth-of-type(2) {
+            animation-delay: 1.5s;
+        }
+
+        p:nth-of-type(3) {
+            animation-delay: 2s;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #fdbb2d;
+            color: #000;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation-delay: 2.5s;
+        }
+
+        .button:hover {
+            background: #ffc107;
+            transform: translateY(-3px);
+            transition: transform 0.3s ease-in-out, background 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Selamat Datang di Website Saya</h1>
+        <p>Perkenalkan, saya Irfa Fitrio Romadhon, namun banyak yang memanggil saya Tayo di komunitas. Saya membuat website ini sebagai sarana pembelajaran dan untuk berbagi pengetahuan, terutama mengenai Termux.</p>
+        <p>Semoga informasi yang ada di sini bermanfaat untuk Anda. Saya harap Anda dapat memanfaatkan website ini dengan bijak dan tidak disalahgunakan.</p>
+        <p>Terima kasih telah mengunjungi website ini. Jangan ragu untuk kembali dan menggali lebih banyak pengetahuan!</p>
+        
+        <a href="tools.html" class="button">kembali ke tools</a>
+        <a href="index.html" class="button">Kembali ke halaman utama</a>
+    </div>
+
+</body>
+</html>

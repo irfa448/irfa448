@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tayo Tools - Tutorial Penginstalan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #141e30, #243b55);
+            color: #f5f5f5;
+            text-align: center;
+        }
+        header {
+            background: #0f2027;
+            padding: 20px 0;
+            color: #fdbb2d;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        p.subtitle {
+            margin: 0;
+            font-size: 1.2em;
+            color: #ddd;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: slideUp 1.5s ease-out;
+        }
+        .tool {
+            text-align: left;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .tool h2 {
+            font-size: 1.8em;
+            color: #fdbb2d;
+        }
+        .tool p {
+            margin: 5px 0 10px;
+            line-height: 1.6;
+        }
+        .tool pre {
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #111;
+            padding: 10px 0;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tayo Tools</h1>
+        <p class="subtitle">Tutorial Penginstalan Tools Hacking</p>
+    </header>
+    <div class="container">
+        <div class="tool">
+            <h2>1. Brutal-W4</h2>
+            <p><strong>Langkah Penginstalan:</strong></p>
+            <pre>
+$ cd $HOME
+$ apt update && apt upgrade
+$ pkg install bash curl wget jq
+$ pkg install python python-pip
+$ pkg install make clang
+$ pkg install git
+$ git clone https://github.com/Sxp-ID/Brutal-W4
+$ cd Brutal-W4
+$ git pull
+$ make install
+$ ./main
+
+Atau bisa juga run script dengan perintah:
+$ make run
+
+Update script:
+$ make update
+
+Reset script:
+$ make reset
+$ make update
+$ make install
+$ make run (atau) ./main
+            </pre>
+        </div>
+        <div class="tool">
+            <h2>2. Black Hydra</h2>
+            <p><strong>Langkah Penginstalan:</strong></p>
+            <pre>
+# cd $HOME
+# apt update && apt upgrade
+$ git clone https://github.com/Gameye98/Black-Hydra.git
+$ cd Black-Hydra
+$ pkg install python
+$ pkg install python2
+$ python2 blackhydra_1.0.py
+            </pre>
+        </div>
+        <div class="tool">
+            <h2>3. RED HAWK</h2>
+            <p><strong>Langkah Penginstalan:</strong></p>
+            <pre>
+$ pkg install git
+$ pkg install python
+$ pkg install php
+$ git clone https://github.com/Tuhinshubhra/RED_HAWK.git
+$ cd RED_HAWK
+$ php rhawk.php
+            </pre>
+        </div>
+        <div class="tool">
+            <h2>4. Bug Hunter</h2>
+            <p><strong>Langkah Penginstalan:</strong></p>
+            <pre>
+$ pkg update && pkg upgrade
+$ pkg install git python
+$ git clone https://github.com/some-repo/Bug-Hunter.git
+$ cd Bug-Hunter
+$ python3 bughunter.py
+            </pre>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Tayo Tools. Hanya untuk edukasi dan pengujian keamanan pribadi.</p>
+    </footer>
+</body>
+</html>

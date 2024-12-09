@@ -15,8 +15,8 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(120deg, #141E30, #243B55);
-            overflow: hidden;
             color: white;
+            overflow: hidden;
         }
 
         /* Latar belakang hujan */
@@ -49,14 +49,14 @@
             }
         }
 
-        /* Teks Hacker */
         .hacker-text {
             font-size: 20px;
-            margin-bottom: 10px;
             color: #00ff00;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
             animation: blink 1s infinite;
-            position: relative;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
 
         @keyframes blink {
@@ -68,52 +68,34 @@
             }
         }
 
-        /* Kontainer Utama */
         .container {
             text-align: center;
             z-index: 10;
-        }
-
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-            animation: fadeIn 2s ease-out forwards;
-            animation-delay: 0.5s;
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         }
 
         h1 {
             font-size: 36px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #eee;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            animation: fadeIn 2s ease-out forwards;
-            animation-delay: 1s;
         }
 
         .description {
             font-size: 16px;
-            margin: 20px 0;
-            padding: 0 20px;
+            margin-bottom: 20px;
             color: #ccc;
             line-height: 1.5;
-            text-align: justify;
-            opacity: 0;
-            animation: fadeIn 2s ease-out forwards;
-            animation-delay: 1.5s;
         }
 
+        /* Menu Responsif */
         .menu {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin-top: 20px;
-            opacity: 0;
-            animation: fadeIn 2s ease-out forwards;
-            animation-delay: 2s;
         }
 
         .menu button {
@@ -125,7 +107,7 @@
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: 0.3s;
+            transition: transform 0.3s;
         }
 
         .menu button:hover {
@@ -134,10 +116,7 @@
         }
 
         .audio-container {
-            margin-top: 10px;
-            opacity: 0;
-            animation: fadeIn 2s ease-out forwards;
-            animation-delay: 2.5s;
+            margin-top: 20px;
             text-align: center;
         }
 
@@ -150,24 +129,50 @@
             background: linear-gradient(to right, #ff7e5f, #feb47b);
             color: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: 0.3s;
+            transition: transform 0.3s;
         }
 
         .audio-container button:hover {
             transform: scale(1.1);
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Animasi Gelombang */
+        .waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: #243B55;
+            overflow: hidden;
+            line-height: 0;
         }
 
+        .waves svg {
+            position: relative;
+            display: block;
+            width: calc(150% + 1.3px);
+            height: 100%;
+        }
+
+        .waves .wave1 {
+            fill: rgba(255, 255, 255, 0.1);
+            animation: moveWave 4s infinite linear;
+        }
+
+        .waves .wave2 {
+            fill: rgba(255, 255, 255, 0.2);
+            animation: moveWave 6s infinite linear;
+        }
+
+        @keyframes moveWave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -185,30 +190,32 @@
         </audio>
     </div>
 
-    <!-- Latar belakang hujan -->
-    <div class="rain"></div>
-
     <!-- Konten Utama -->
     <div class="container">
-        <div class="logo"></div>
         <h1>Selamat Datang</h1>
         <div class="description">
-            <p><strong>Termux</strong> adalah aplikasi emulator terminal untuk Android yang menyediakan lingkungan Linux minimal. Dengan Termux, Anda dapat menjalankan skrip, menggunakan perintah Linux, dan menginstal berbagai alat pengembangan langsung dari perangkat Android Anda.</p>
+            <p><strong>Termux</strong> adalah aplikasi emulator terminal untuk Android yang menyediakan lingkungan Linux minimal. Anda dapat menggunakannya untuk menjalankan berbagai perintah Linux, membuat skrip, dan banyak lagi!</p>
         </div>
 
+        <!-- Menu Responsif -->
         <div class="menu">
-            <button onclick="window.location.href='tools.html'">Kumpulan Tools Termux</button>
-            <button onclick="window.location.href='tat.html'">day 2</membuat>
-            <button onclick="window.open('https://youtu.be/56jdMBfhjiY?si=vMlb_ti4KRuvSJHI', '_blank')">YouTube Saya</button>
-            <button onclick="window.open('https://wa.me/628818548531', '_blank')">Hubungi Saya di WhatsApp</button>
+            <button onclick="window.location.href='tools.html'">Kumpulan Tools</button>
+            <button onclick="window.location.href='tat.html'">Day 2</button>
+            <button onclick="window.open('https://youtu.be/56jdMBfhjiY', '_blank')">YouTube Saya</button>
+            <button onclick="window.open('https://wa.me/628818548531', '_blank')">Hubungi Saya</button>
             <button onclick="window.open('https://whatsapp.com/channel/0029Val7UdFC6Zvi9mp3Ff3r', '_blank')">Masuk ke Saluran</button>
-            <button onclick="window.open('https://had-ai.vercel.app', '_blank')">bantuan ai TC 2</button>
+            <button onclick="window.open('https://had-ai.vercel.app', '_blank')">Bantuan AI TC 2</button>
         </div>
     </div>
 
-    <!-- Script untuk membuat hujan -->
+    <!-- Gelombang di bagian bawah -->
+    <div class="waves">
+        <svg class="wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,128L48,160C96,192,192,256,288,266.7C384,277,480,235,576,197.3C672,160,768,128,864,149.3C960,171,1056,245,1152,266.7C1248,288,1344,256,1392,240L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        <svg class="wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,192L48,170.7C96,149,192,107,288,122.7C384,139,480,213,576,240C672,267,768,245,864,213.3C960,181,1056,139,1152,117.3C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Script -->
     <script>
-        // Script untuk tombol audio
         const audioPlayer = document.getElementById('audioPlayer');
         const audioButton = document.getElementById('audioButton');
 
@@ -221,18 +228,6 @@
                 audioButton.textContent = 'Putar Musik';
             }
         });
-
-        // Script untuk membuat efek hujan
-        const rainContainer = document.querySelector('.rain');
-        const createRaindrop = () => {
-            const raindrop = document.createElement('div');
-            raindrop.classList.add('raindrop');
-            raindrop.style.left = Math.random() * 100 + 'vw';
-            raindrop.style.animationDuration = Math.random() * 2 + 2 + 's';
-            rainContainer.appendChild(raindrop);
-            setTimeout(() => raindrop.remove(), 4000);
-        };
-        setInterval(createRaindrop, 100);
     </script>
 </body>
 </html>

@@ -81,6 +81,21 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* Styling for the 'Lanjut' button */
+        .continue-btn {
+            background-color: #00ff00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .continue-btn:hover {
+            background-color: #009900;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +144,11 @@
             <p><strong>Cara Menggunakan:</strong></p>
             <p>Masuk ke folder <code>facebash</code>, lalu jalankan <code>bash facebash.sh</code>. Pastikan TOR sudah terinstal di sistem Anda.</p>
         </div>
+
+        <!-- Lanjut button to menu2.html -->
+        <a href="menu2.html">
+            <button class="continue-btn">Lanjut</button>
+        </a>
     </div>
     <footer>
         <p>&copy; 2024 Tayo Tools. Hanya untuk edukasi dan pengujian keamanan pribadi.</p>

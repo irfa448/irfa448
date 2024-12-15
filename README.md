@@ -27,7 +27,7 @@
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
-- ➪ 𝙽𝙰𝙼𝙴 :- 𝙼𝚄𝙼𝙸𝚃 𝙸𝚂𝙻𝙰𝙼 𝙷𝙸𝙼𝚄
+- ➪ 𝙽𝙰𝙼𝙴 :- TAYOO
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
@@ -47,7 +47,7 @@
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
-- ➪ 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙶𝚁𝙾𝚄𝙿 :- [𝙸𝙽𝙽𝙾𝙲𝙴𝙽𝚃 𝙱𝙾𝚈 𝚃𝙴𝚁𝙼𝚄𝚇 𝙲𝙾𝙼𝙼𝙰𝙽𝙳 𝚆𝙾𝚁𝙻𝙳](https://facebook.com/groups/termuxteambd/)
+- ➪ hubungi kami :- [hubungi](https://wa.me/6283852751527)
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
@@ -55,7 +55,7 @@
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
-- ➪ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 :- [𝙱𝚁𝙾𝚃𝙷𝙴𝚁 𝚃𝙴𝙲𝙷 𝟷𝙼](https://www.youtube.com/@hellboyyofficial730)
+- ➪ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 :- [HELOBOY OFFICIAL](https://www.youtube.com/@hellboyyofficial730)
 
 <img align="center" alt="line" src="https://github.com/DalpatRathore/dalpatrathore/blob/main/assets/images/line-2.svg">
 
